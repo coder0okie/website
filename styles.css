@@ -69,8 +69,7 @@ nav a:hover {
 }
 
 footer {
-    /* Hintergrundfarbe oder Hintergrundbild, falls gewünscht */
-    /*background-color: #333;*/
+    background-color: #f8f8f8; /* Hintergrundfarbe für den Footer */
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px 0;
@@ -80,8 +79,8 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    
 }
+
 
 footer p {
     font-size: 14px; /* Kleinere Schriftgröße für das <p> im Footer */
