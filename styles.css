@@ -65,11 +65,20 @@ nav a:hover {
 }
 
 footer {
+    /* Hintergrundfarbe oder Hintergrundbild, falls gewünscht */
     /*background-color: #333;*/
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px 0;
+
+    /* Flexbox-Stile für die zentrale Ausrichtung am unteren Rand */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
 }
+
 
 .home-button {
     position: fixed; /* Feste Position */
