@@ -86,3 +86,7 @@ footer {
 .home-button:hover {
     background-color: #45a049; /* Farbe beim Hovern über den Button */
 }
+
+.content {
+    margin-top: 20px; /* Abstand von mindestens 20px unter dem Button */
+}
