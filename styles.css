@@ -10,7 +10,7 @@ body {
     background-repeat: repeat; /* Repeat the image to create a tile effect */
 }
 
-header, nav, section, footer {
+header, nav, section {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for readability */
 }
