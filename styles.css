@@ -82,6 +82,11 @@ footer {
     
 }
 
+footer p {
+    font-size: 14px; /* Kleinere Schriftgröße für das <p> im Footer */
+}
+
+
 
 .home-button {
     position: fixed; /* Feste Position */
