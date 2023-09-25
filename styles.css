@@ -30,7 +30,10 @@ p {
     text-align: center;
 
 }
-
+.about-paragraph {
+    text-align: center; /* Zentrale Textausrichtung */
+    /* Ihre anderen spezifischen Stile hier */
+}
 nav {
     background-color: #333;
     overflow: hidden;
