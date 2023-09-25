@@ -62,7 +62,8 @@ nav a:hover {
 .news-item img {
     max-width: 45%; /* Adjust as needed */
     height: auto;
-    margin-right: 20px; /* Space between image and text */
+    margin: 0 auto; /* Zentrieren Sie das Bild horizontal */
+    display: block; /* Stellen Sie sicher, dass das Bild horizontal zentriert ist */
 }
 
 footer {
