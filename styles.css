@@ -70,3 +70,19 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+.home-button {
+    position: fixed; /* Feste Position */
+    top: 0; /* Oben am Bildschirm */
+    left: 0; /* Links am Bildschirm */
+    background-color: #4CAF50; /* Hintergrundfarbe des Buttons */
+    color: white; /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand des Buttons */
+    border-radius: 5px; /* Abrundung der Ecken */
+    text-decoration: none; /* Unterstreichung entfernen */
+    z-index: 9999; /* Hohe z-Index, um sicherzustellen, dass der Button über allem liegt */
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Farbe beim Hovern über den Button */
+}
