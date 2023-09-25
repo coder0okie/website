@@ -105,4 +105,8 @@ footer {
 h2 {
     text-align: center;
 }
-
+section#news p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
