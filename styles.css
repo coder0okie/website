@@ -67,7 +67,8 @@ nav a:hover {
 }
 
 footer {
-    /*background-color: #f8f8f8; /* Hintergrundfarbe für den Footer */
+    /* Hintergrundfarbe für den Footer */
+    /* background-color: #f8f8f8;  */
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px 0;
@@ -119,6 +120,10 @@ section#uber-mich p {
     max-width: 100%;
 }
 section#socialmedia ul {
+    list-style: none;
+    padding: 0;
+}
+section#socialmedia li {
     list-style: none;
     padding: 0;
 }
