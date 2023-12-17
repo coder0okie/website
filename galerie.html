@@ -25,7 +25,7 @@
                 var bildContainer = document.getElementById('bildContainer');
 
                 // PHP generiert ein JSON-Array mit den Bildernamen
-                var bilder = <?php echo json_encode(scandir('main/')); ?>;
+                var bilder = <?php echo json_encode(scandir('/')); ?>;
 
                 // Entferne . und .. aus der Liste
                 bilder = bilder.filter(function (item) {
