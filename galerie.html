@@ -17,6 +17,30 @@
     </a>
     <section id="Galerie">
         <h2>Galerie</h2>
+        <div id="bildContainer"></div>
+
+        <script>
+            // JavaScript, um Bilder dynamisch zu laden
+            window.onload = function () {
+                var bildContainer = document.getElementById('bildContainer');
+
+                // PHP generiert ein JSON-Array mit den Bildernamen
+                var bilder = <?php echo json_encode(scandir('pfad/zum/deinem/verzeichnis')); ?>;
+
+                // Entferne . und .. aus der Liste
+                bilder = bilder.filter(function (item) {
+                    return item !== "." && item !== "..";
+                });
+
+                for (var i = 0; i < bilder.length; i++) {
+                    var bildElement = document.createElement('img');
+                    bildElement.src = 'pfad/zum/deinem/verzeichnis/' + bilder[i];
+                    bildElement.alt = 'Bild ' + (i + 1);
+                    bildElement.className = 'bild';
+                    bildContainer.appendChild(bildElement);
+                }
+            };
+        </script>
     </section>
     <!-- Inhalte der Galerie-Seite -->
 </body>
