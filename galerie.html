@@ -7,13 +7,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-   <a href="index.html" class="home-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40 40">
-        <!-- Dach (größer um 100%, höher und spitzer) -->
-        <polygon points="0 10 40 10 20 0" fill="black" />
-        <!-- Hauskörper (größer um 100%, darunter) -->
-        <rect x="0" y="10" width="40" height="30" fill="black" />
-    </svg>
+    <a href="index.html" class="home-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40 40">
+            <polygon points="0 10 40 10 20 0" fill="black" />
+            <rect x="0" y="10" width="40" height="30" fill="black" />
+        </svg>
     </a>
     <section id="Galerie">
         <h2>Galerie</h2>
@@ -21,20 +19,16 @@
 
         <script>
             // JavaScript, um Bilder dynamisch zu laden
-            window.onload = function () {
+            window.onload = async function () {
                 var bildContainer = document.getElementById('bildContainer');
 
-                // PHP generiert ein JSON-Array mit den Bildernamen
-                var bilder = <?php echo json_encode(scandir('/')); ?>;
-
-                // Entferne . und .. aus der Liste
-                bilder = bilder.filter(function (item) {
-                    return item !== "." && item !== "..";
-                });
+                // Fetch-Anfrage, um Bilder von der Server-Seite zu erhalten
+                var response = await fetch('/galerie');
+                var bilder = await response.json();
 
                 for (var i = 0; i < bilder.length; i++) {
                     var bildElement = document.createElement('img');
-                    bildElement.src = 'main/' + bilder[i];
+                    bildElement.src = bilder[i];
                     bildElement.alt = 'Bild ' + (i + 1);
                     bildElement.className = 'bild';
                     bildContainer.appendChild(bildElement);
